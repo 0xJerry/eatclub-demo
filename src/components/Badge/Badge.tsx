@@ -1,4 +1,4 @@
-import styles from "./Badge.module.css";
+import styles from './Badge.module.css';
 
 const Badge = () => {
   return <div className={styles.badge}>Badge</div>;

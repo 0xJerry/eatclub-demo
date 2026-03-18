@@ -2,7 +2,7 @@
 
 :root {
   /* font family */
-  --font-family-base: "Inter", system-ui, -apple-system, sans-serif;
+  --font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
 
   /* font weights */
   --font-weight-regular: 400;
