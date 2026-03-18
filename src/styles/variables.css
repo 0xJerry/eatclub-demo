@@ -1,0 +1,62 @@
+/* EatClub Demo App - Design System (WIP) */
+
+:root {
+  /* font family */
+  --font-family-base: "Inter", system-ui, -apple-system, sans-serif;
+
+  /* font weights */
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  /* heading sizes */
+  --font-size-h1: 2rem; /* 32px — Page titles */
+  --font-size-h2: 1.5rem; /* 24px — Section / restaurant name */
+  --font-size-h3: 1.25rem; /* 20px — Card headings */
+  --font-size-h4: 1.125rem; /* 18px — Sub-section headings */
+  --font-size-h5: 1rem; /* 16px — Small headings */
+  --font-size-h6: 0.875rem; /* 14px — Micro headings */
+
+  /* body sizes */
+  --font-size-body-lg: 1rem; /* 16px - Primary text */
+  --font-size-body: 0.875rem; /* 14px - Metadata */
+  --font-size-body-sm: 0.75rem; /* 12px - Captions */
+
+  /* button */
+  --font-size-button: 0.875rem;
+  --font-weight-button: var(--font-weight-bold);
+
+  /* badge */
+  --font-size-badge: 0.75rem;
+  --font-weight-badge: var(--font-weight-bold);
+
+  /* brand */
+  --color-brand-primary: #db334c;
+  --color-brand-primary-hover: #c42840;
+  --color-brand-primary-light: #fbeaed;
+
+  /* text */
+  --color-text-primary: #282828;
+  --color-text-secondary: #6b6b6b;
+  --color-text-disabled: #b0b0b0;
+  --color-text-inverse: #ffffff;
+
+  /* backgrounds, dividers & borders */
+  --color-bg: #ffffff;
+  --color-divider: #eeeeee;
+  --color-border: #e0e0e0;
+  --color-border-brand: var(--color-brand-primary);
+
+  /* spacing */
+  --space-1: 0.25rem; /* 4px */
+  --space-2: 0.5rem; /* 8px */
+  --space-3: 0.75rem; /* 12px */
+  --space-4: 1rem; /* 16px */
+  --space-5: 1.25rem; /* 20px */
+  --space-6: 1.5rem; /* 24px */
+  --space-8: 2rem; /* 32px */
+
+  /* border radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+}
