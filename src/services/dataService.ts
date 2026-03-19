@@ -70,3 +70,25 @@ export async function fetchRestaurantsData(): Promise<Restaurant[]> {
     return [];
   }
 }
+export const formatNameForUrl = (name: string) => {
+  return name
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+};
+
+export async function fetchRestaurantBySlug(
+  slug: string
+): Promise<Restaurant | null> {
+  const restaurants = await fetchRestaurantsData();
+  const shortId = slug.split('-').pop()?.toLowerCase();
+  const urlSafeName = slug.split('-').slice(0, -1).join('-');
+
+  return (
+    restaurants.find(r => {
+      const dbShortId = r.objectId.split('-')[0].toLowerCase();
+      const dbUrlSafeName = formatNameForUrl(r.name);
+      return dbShortId === shortId && dbUrlSafeName === urlSafeName;
+    }) || null
+  );
+}

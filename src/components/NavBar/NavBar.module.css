@@ -7,10 +7,6 @@
   border-bottom: 1px solid var(--color-border);
   background-color: var(--color-bg);
   min-height: var(--nav-height);
-
-  @media (min-width: 600px) {
-    min-height: var(--nav-height-desktop);
-  }
 }
 
 .navbar {

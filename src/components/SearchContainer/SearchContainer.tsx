@@ -31,7 +31,7 @@ export default function SearchContainer({ initialRestaurants }: Props) {
     <div>
       <SearchBar query={query} onQueryChange={setQuery} />
       {initialRestaurants.length === 0 ? (
-        <p>No data: Add Error Boundary</p>
+        <p>No results found</p>
       ) : (
         <RestaurantList restaurants={filteredRestaurants} />
       )}

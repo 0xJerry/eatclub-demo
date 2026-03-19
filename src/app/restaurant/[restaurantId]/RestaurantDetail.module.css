@@ -1,0 +1,182 @@
+.restaurantDetails {
+  margin: 0 auto;
+  background: var(--color-bg);
+  max-width: 600px;
+  min-height: 100vh;
+  color: var(--color-text-primary);
+  font-family: var(--font-family-base);
+
+  .btnBack {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    padding: var(--space-8) 0;
+    color: var(--color-text-primary);
+    text-decoration: none;
+  }
+
+  .imageWrapper {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .newBadge {
+      display: flex;
+      position: absolute;
+      top: var(--space-4);
+      right: var(--space-4);
+      align-items: center;
+      border-radius: var(--radius-sm);
+      background: var(--color-brand-primary);
+      padding: var(--space-1) var(--space-3);
+      color: var(--color-text-inverse);
+      font-weight: var(--font-weight-bold);
+      font-size: var(--font-size-body-sm);
+    }
+  }
+
+  .actionsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-bottom: 1px solid var(--color-divider);
+    background: white;
+    padding: var(--space-4) 0;
+
+    .actionItem {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: var(--space-2);
+      cursor: pointer;
+      border: none;
+      background: none;
+      color: var(--color-text-primary);
+      font-weight: 600;
+      font-size: var(--font-size-body-sm);
+
+      svg {
+        width: 1.4rem;
+        height: 1.4rem;
+        color: var(--color-text-secondary);
+      }
+    }
+  }
+
+  .titleSection {
+    padding: var(--space-4) var(--space-4);
+    text-align: center;
+
+    h1 {
+      margin-bottom: var(--space-2);
+      font-weight: var(--font-weight-bold);
+      font-size: var(--font-size-h1);
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: var(--space-2);
+      color: var(--color-text-secondary);
+      font-size: var(--font-size-body);
+
+      span:not(:last-child)::after {
+        margin-left: 6px;
+        content: '•';
+      }
+    }
+
+    .info {
+      margin-top: var(--space-4);
+      border-top: 1px solid var(--color-divider);
+      padding: var(--space-2) var(--space-4) 0;
+      color: var(--color-text-primary);
+      font-size: var(--font-size-body-lg);
+
+      .infoRow {
+        display: flex;
+        align-items: center;
+        gap: var(--space-3);
+        padding: var(--space-3) 0;
+
+        &:last-child {
+          padding-bottom: 0;
+        }
+
+        svg {
+          width: 1.25rem;
+          height: 1.25rem;
+        }
+      }
+    }
+  }
+
+  /* Deals List */
+  .dealsSection {
+    margin-top: var(--space-2);
+    padding: 0 var(--space-4);
+
+    .dealCard {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid var(--color-divider);
+      padding: var(--space-3) 0;
+
+      .dealContent {
+        .dealTitle {
+          display: flex;
+          align-items: center;
+          gap: var(--space-2);
+          margin-bottom: 2px;
+          color: var(--color-brand-primary);
+          font-weight: var(--font-weight-bold);
+          font-size: var(--font-size-h2);
+
+          svg {
+            width: 1.25rem;
+            height: 1.25rem;
+          }
+        }
+
+        .dealTime {
+          color: var(--color-text-secondary);
+          font-weight: var(--font-weight-regular);
+          font-size: var(--font-size-body);
+        }
+
+        .dealQty {
+          margin-top: var(--space-3);
+          color: var(--color-text-disabled);
+        }
+      }
+
+      .btnRedeem {
+        cursor: pointer;
+        border: 2px solid var(--color-brand-primary);
+        border-radius: 25px;
+        background: var(--color-bg);
+        padding: var(--space-3) var(--space-8);
+        color: var(--color-brand-primary);
+        font-weight: var(--font-weight-bold);
+        font-size: var(--font-size-body);
+
+        &:hover {
+          background: var(--color-brand-primary);
+          color: var(--color-text-inverse);
+        }
+      }
+    }
+  }
+}
