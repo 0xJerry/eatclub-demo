@@ -8,9 +8,12 @@ import Link from 'next/link';
 const RestaurantCard = ({ restaurant }: { restaurant: Restaurant }) => {
   const safeName = formatNameForUrl(restaurant.name);
   const shortId = restaurant.objectId.split('-')[0].toLowerCase();
-  
+
   return (
-    <Link href={`/restaurant/${safeName}-${shortId}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+    <Link
+      href={`/restaurant/${safeName}-${shortId}`}
+      className={styles.cardLink}
+    >
       <article className={styles.card}>
         {restaurant.deals?.map((deal, i) => (
           <Badge key={i} deal={deal} />

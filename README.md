@@ -55,7 +55,7 @@
 
 - Filter by partial name and cuisines.
 
-- [TODO] Sort: Implement sort by best deals first.
+- Sort: Implement sort by best deals by discount %, with a shared util on both Restaurant List and Detail pages. From a user's perpective I would also take into account user's geo distance from the restaurant, just like the existing app, but this ability is limited by the mock data and test requirements.
 
 ### Restaurant Detail Page
 
@@ -72,6 +72,12 @@
 - Image carousel: Only one image is available per restaurant in the mock data, so I implemented a static image.
 
 - Scroll top: While maintaining scroll position is beneficial on the Restaurant List page, every click into a Restaurant Detail page should reset scroll position for each restaurant. I implemented a ScrollToTop function that resets the scroll position on load of this page.
+
+## Testing
+
+- Unit tests: With limited time, I focused on writing unit tests for high-priority utility functions first (e.g. `src/utils/deals.ts`). These tests demonstrate the benefit of verifying data sorting and parsing logic which is critical for the user experience. Run tests with `yarn test`.
+
+- Other test requirements such as minimum coverage, E2E, accessibilty & snapshot testing, and precommit hooks should obviously be considered in a prod environment.
 
 ## Getting Started
 
