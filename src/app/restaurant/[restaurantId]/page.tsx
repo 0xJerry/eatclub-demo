@@ -1,9 +1,6 @@
 import { fetchRestaurantBySlug } from '@/services/dataService';
 import { redirect } from 'next/navigation';
-import styles from './RestaurantDetail.module.css';
-import RestaurantImage from '@/components/RestaurantCard/components/RestaurantImage';
 import Link from 'next/link';
-import ScrollToTop from '@/components/ScrollToTop';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart, faClock } from '@fortawesome/free-regular-svg-icons';
 import {
@@ -12,6 +9,10 @@ import {
   faBookOpen,
   faChevronLeft
 } from '@fortawesome/free-solid-svg-icons';
+import ScrollToTop from '@/components/ScrollToTop';
+import { sortDealsByDiscount } from '@/utils/deals';
+import RestaurantImage from '@/components/RestaurantCard/components/RestaurantImage';
+import styles from './RestaurantDetail.module.css';
 
 interface Props {
   params: Promise<{
@@ -90,7 +91,7 @@ export default async function RestaurantPage({ params }: Props) {
       </section>
 
       <section className={styles.dealsSection}>
-        {restaurant.deals?.map(deal => (
+        {sortDealsByDiscount(restaurant.deals || []).map(deal => (
           <div key={deal.objectId} className={styles.dealCard}>
             <div className={styles.dealContent}>
               <div className={styles.dealTitle}>⚡️ {deal.discount}% Off</div>

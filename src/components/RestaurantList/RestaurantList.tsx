@@ -1,6 +1,7 @@
 import styles from './RestaurantList.module.css';
 import RestaurantCard from '@/components/RestaurantCard/RestaurantCard';
 import { Restaurant } from '@/services/dataService';
+import { sortRestaurantsByBestDeal } from '@/utils/deals';
 
 export default function RestaurantList({
   restaurants
@@ -12,7 +13,7 @@ export default function RestaurantList({
       {restaurants.length === 0 ? (
         <p>No data</p>
       ) : (
-        restaurants.map((restaurant, i) => (
+        sortRestaurantsByBestDeal(restaurants).map((restaurant, i) => (
           <RestaurantCard key={i} restaurant={restaurant} />
         ))
       )}
