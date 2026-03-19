@@ -6,8 +6,10 @@
 | ---------------- | ----------------------------------------- |
 | `src/app`        | NextJS App Router pages                   |
 | `src/components` | Shared UI "Atoms" (Buttons, Cards, Nav)   |
+| `src/hooks`      | Custom React hooks (Debounce)             |
 | `src/services`   | Data fetching & Zod validation            |
 | `src/styles`     | Vanilla CSS Design system (Tokens & vars) |
+| `src/utils`      | Utility functions (ScrollToTop, sorting)  |
 
 ## Dev Notes / Decisions
 
@@ -19,9 +21,15 @@
 
 - Caching: To protect test CDN and speed up local development, cache policy is set to `force-cache` for dev purposes only
 
+- Image optimisation: Use `next/image` for image optimisation through auto-resizing. Would look at Lazy Loading with more time.
+
+- Client side search: Client-side filtering for this prototype to provide an instant response app-like feel.
+
 ### UI and Design System
 
 - Design system: A basic design system has been created using CSS variables
+
+- Framework: While Tailwind is sometimes faster for prototyping, I wanted to build a bespoke design system in Vanilla CSS that has zero-dependency performance and customisability for this quick demo.
 
 - Inter font: Loaded from Google Fonts CDN as a simple PoC, integrated using `next/font` API for better performance and prevent layout shifting
 
@@ -47,7 +55,7 @@
 
 - HTML hierarchy: I used `article` tag for each restaurant card to semantically represent the content. Proper `h1` and `h2` were also used for correct DOM structure.
 
-- [TODO] Lazy loading / skeleton loading card images.
+- [TODO] Card images loaded via `next/image` with lazy loading / skeleton loading / progressive blur loading: Would explore this with more time.
 
 #### Search and Sort
 

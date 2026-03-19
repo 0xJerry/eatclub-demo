@@ -9,7 +9,7 @@ import {
   faBookOpen,
   faChevronLeft
 } from '@fortawesome/free-solid-svg-icons';
-import ScrollToTop from '@/components/ScrollToTop';
+import ScrollToTop from '@/utils/ScrollToTop';
 import { sortDealsByDiscount } from '@/utils/deals';
 import RestaurantImage from '@/components/RestaurantCard/components/RestaurantImage';
 import styles from './RestaurantDetail.module.css';
