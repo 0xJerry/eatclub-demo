@@ -1,16 +1,16 @@
 /* google fonts — inter 400 + 700 */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap');
 
 /* design tokens */
-@import "./variables.css";
+@import './variables.css';
 
 /* reset */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 html,
@@ -20,14 +20,23 @@ body {
 }
 
 body {
-  font-family: var(--font-family-base);
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
   font-weight: var(--font-weight-regular);
   font-size: var(--font-size-body-lg);
-  color: var(--color-text-primary);
-  background-color: var(--color-bg);
+  font-family: var(--font-family-base);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.5;
+}
+
+main {
+  z-index: var(--z-index-content);
+  padding-top: var(--nav-height);
+
+  @media (min-width: 600px) {
+    padding-top: var(--nav-height-desktop);
+  }
 }
 
 a {
@@ -37,26 +46,38 @@ a {
 
 /* headings */
 h1 {
-  font-size: var(--font-size-h1);
   font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-h1);
 }
 h2 {
-  font-size: var(--font-size-h2);
   font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-h2);
 }
 h3 {
-  font-size: var(--font-size-h3);
   font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-h3);
 }
 h4 {
-  font-size: var(--font-size-h4);
   font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-h4);
 }
 h5 {
-  font-size: var(--font-size-h5);
   font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-h5);
 }
 h6 {
-  font-size: var(--font-size-h6);
   font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-h6);
+}
+
+.sr-only {
+  position: absolute;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border-width: 0;
+  white-space: nowrap;
 }

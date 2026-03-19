@@ -2,11 +2,11 @@
 
 :root {
   /* font family */
-  --font-family-base: "Inter", system-ui, -apple-system, sans-serif;
+  --font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
 
   /* font weights */
   --font-weight-regular: 400;
-  --font-weight-bold: 700;
+  --font-weight-bold: 800;
 
   /* heading sizes */
   --font-size-h1: 2rem; /* 32px — Page titles */
@@ -26,7 +26,7 @@
   --font-weight-button: var(--font-weight-bold);
 
   /* badge */
-  --font-size-badge: 0.75rem;
+  --font-size-badge: 1rem;
   --font-weight-badge: var(--font-weight-bold);
 
   /* brand */
@@ -59,4 +59,13 @@
   --radius-sm: 4px;
   --radius-md: 8px;
   --radius-lg: 12px;
+
+  /* responsive navigation */
+  --nav-height: 2.5rem;
+  --nav-height-desktop: 4.5rem;
+  --search-height: 3.5rem;
+
+  /* z-index */
+  --z-index-nav: 800;
+  --z-index-content: 500;
 }

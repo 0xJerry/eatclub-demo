@@ -1,0 +1,9 @@
+.listView {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(600px, 100%), 650px));
+  justify-content: center;
+  gap: var(--space-6);
+  margin-top: var(--search-height);
+  padding: var(--space-6) var(--space-6) var(--space-8);
+  width: 100%;
+}
