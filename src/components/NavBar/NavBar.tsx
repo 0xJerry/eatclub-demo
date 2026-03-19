@@ -17,10 +17,12 @@ const NavBar = () => {
           type="button"
         >
           <FontAwesomeIcon icon={faUser} className={styles.icon} />
+          <span className="sr-only">User</span>
         </button>
 
         <Link href="/" aria-label="Home" className={styles.logoLink}>
           <FontAwesomeIcon icon={faFaceLaugh} className={styles.logo} />
+          <span className="sr-only">Restaurants</span>
         </Link>
 
         <button
@@ -29,6 +31,7 @@ const NavBar = () => {
           type="button"
         >
           <FontAwesomeIcon icon={faListAlt} className={styles.icon} />
+          <span className="sr-only">Settings</span>
         </button>
       </nav>
     </header>

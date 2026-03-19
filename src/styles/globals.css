@@ -1,5 +1,5 @@
 /* google fonts — inter 400 + 700 */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap');
 
 /* design tokens */
 @import './variables.css';
@@ -31,7 +31,12 @@ body {
 }
 
 main {
-  padding-top: 2.5rem;
+  z-index: var(--z-index-content);
+  padding-top: var(--nav-height);
+
+  @media (min-width: 600px) {
+    padding-top: var(--nav-height-desktop);
+  }
 }
 
 a {
@@ -63,4 +68,16 @@ h5 {
 h6 {
   font-weight: var(--font-weight-bold);
   font-size: var(--font-size-h6);
+}
+
+.sr-only {
+  position: absolute;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border-width: 0;
+  white-space: nowrap;
 }
